@@ -11,9 +11,9 @@ RSpec.describe Person do
   it 'has attributes' do
     kathy = Person.new('Kathy Chan', 10)
 
-    expect(kathy.name).to be('Kathy Chan')
-    expect(kathy.experience).to be(10)
-    expect(kathy.specialties).to be([])
+    expect(kathy.name).to eq('Kathy Chan')
+    expect(kathy.experience).to eq(10)
+    expect(kathy.specialties).to eq([])
   end
 
   it 'adds specialties' do
@@ -22,7 +22,7 @@ RSpec.describe Person do
     kathy.add_specialty(:astrophysics)
     kathy.add_specialty(:quantum_mechanics)
 
-    expect(kathy.specialties).to be([:astrophysics, :quantum_mechanics])
+    expect(kathy.specialties).to eq([:astrophysics, :quantum_mechanics])
   end
 
 end
